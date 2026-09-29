@@ -1,0 +1,131 @@
+vehicles = []
+rentals = []
+
+
+def show_vehicles():
+    print("\nAvailable Vehicles:")
+    for i in range(len(vehicles)):
+        if vehicles[i][3] == "Available":
+            print(i + 1, vehicles[i][1], "- Rs.", vehicles[i][2], "per day")
+
+
+def show_all_vehicles():
+    print("\nAll Vehicles:")
+    for i in range(len(vehicles)):
+        print(
+            i + 1,
+            vehicles[i][1],
+            "- Rs.",
+            vehicles[i][2],
+            "- Status:",
+            vehicles[i][3],
+        )
+
+
+def search_vehicle():
+    name = input("Enter vehicle name: ")
+    found = False
+
+    for i in range(len(vehicles)):
+        if name.lower() == vehicles[i][1].lower():
+            print("\nVehicle Found")
+            print("Name:", vehicles[i][1])
+            print("Type:", vehicles[i][0])
+            print("Rent:", vehicles[i][2])
+            print("Status:", vehicles[i][3])
+            found = True
+
+    if not found:
+        print("Vehicle not found.")
+
+
+def rent_vehicle():
+    show_vehicles()
+
+    try:
+        number = int(input("\nEnter vehicle number: "))
+
+        if number < 1 or number > len(vehicles):
+            print("Invalid vehicle number.")
+            return
+
+        if vehicles[number - 1][3] == "Rented":
+            print("Vehicle is already rented.")
+            return
+
+        name = input("Enter customer name: ")
+        phone = input("Enter phone number: ")
+        days = int(input("Enter number of days: "))
+
+        if days <= 0:
+            print("Number of days should be greater than 0.")
+            return
+
+        price = vehicles[number - 1][2]
+        total = price * days
+
+        vehicles[number - 1][3] = "Rented"
+
+        rental = [name, phone, vehicles[number - 1][1], days, total]
+
+        rentals.append(rental)
+
+        print("\nVehicle rented successfully!")
+        print("Customer:", name)
+        print("Phone:", phone)
+        print("Vehicle:", vehicles[number - 1][1])
+        print("Days:", days)
+        print("Total Rent: Rs.", total)
+
+    except ValueError:
+        print("Please enter a valid number.")
+
+
+def return_vehicle():
+    print("\nRented Vehicles:")
+    found = False
+
+    for i in range(len(vehicles)):
+        if vehicles[i][3] == "Rented":
+            print(i + 1, vehicles[i][1])
+            found = True
+
+    if not found:
+        print("No vehicle is currently rented.")
+        return
+
+    try:
+        number = int(input("Enter vehicle number to return: "))
+
+        if number < 1 or number > len(vehicles):
+            print("Invalid vehicle number.")
+            return
+
+        if vehicles[number - 1][3] == "Available":
+            print("Vehicle is already available.")
+        else:
+            vehicles[number - 1][3] = "Available"
+            print("Vehicle returned successfully.")
+
+    except ValueError:
+        print("Please enter a valid number.")
+
+
+def show_rental_records():
+    print("\nRental Records:")
+
+    if len(rentals) == 0:
+        print("No rental records.")
+    else:
+        for i in range(len(rentals)):
+            print("\nRental", i + 1)
+            print("Customer:", rentals[i][0])
+            print("Phone:", rentals[i][1])
+            print("Vehicle:", rentals[i][2])
+            print("Days:", rentals[i][3])
+            print("Total Rent: Rs.", rentals[i][4])
+
+
+def total_income():
+    total = sum(rental[4] for rental in rentals)
+    print("\nTotal Income: Rs.", total)
