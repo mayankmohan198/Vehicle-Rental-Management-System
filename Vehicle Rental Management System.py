@@ -11,6 +11,7 @@ vehicles = [
 rentals = []
 
 
+
 def show_vehicles():
 
     print("\n========== AVAILABLE VEHICLES ==========")
@@ -33,6 +34,7 @@ def show_vehicles():
 
     if found == False:
         print("No vehicles are available.")
+
 
 
 def show_all_vehicles():
@@ -71,7 +73,6 @@ def search_vehicle():
 
     if found == False:
         print("Vehicle not found.")
-
 
 
 def rent_vehicle():
@@ -133,7 +134,6 @@ def rent_vehicle():
     except ValueError:
 
         print("Please enter numbers correctly.")
-
 
 
 def return_vehicle():
@@ -204,6 +204,7 @@ def show_rental_records():
         print("Vehicle:", rentals[i][2])
         print("Number of Days:", rentals[i][3])
         print("Total Rent: Rs.", rentals[i][4])
+
 
 
 def total_income():
