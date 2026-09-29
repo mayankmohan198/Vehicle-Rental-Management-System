@@ -1,0 +1,117 @@
+# Vehicle Rental Management System
+
+## Project Statement
+
+The **Vehicle Rental Management System** is a beginner-level Python console application designed to manage basic vehicle rental activities.
+
+The system allows users to view available vehicles, view all vehicles, search for a specific vehicle, rent a vehicle, return a rented vehicle, view rental records, and calculate the total rental income.
+
+The project is developed using basic Python programming concepts such as **lists, functions, loops, conditional statements, user input, exception handling, and arithmetic operations**.
+
+## Problem Statement
+
+Managing vehicle rentals manually can make it difficult to keep track of vehicle availability, customer details, rental duration, and rental income.
+
+This project provides a simple console-based solution where vehicle information and rental activities can be managed through a menu-driven Python program.
+
+## Objectives
+
+The main objectives of this project are:
+
+* To maintain a list of available and rented vehicles.
+* To allow users to search for vehicles.
+* To allow customers to rent available vehicles.
+* To calculate the total rental cost based on the number of rental days.
+* To update the vehicle status after renting or returning.
+* To maintain basic rental records.
+* To calculate the total income generated from rentals.
+* To practice fundamental Python programming concepts.
+
+## Main Features
+
+### 1. Show Available Vehicles
+
+Displays only the vehicles that are currently available for rent along with their type, model, and daily rental price.
+
+### 2. Show All Vehicles
+
+Displays all vehicles in the system along with their current status, such as **Available** or **Rented**.
+
+### 3. Search Vehicle
+
+Allows the user to search for a vehicle by entering its name. The system displays the vehicle type, rental price, and current availability status.
+
+### 4. Rent Vehicle
+
+Allows the user to select an available vehicle and enter:
+
+* Customer name
+* Phone number
+* Number of rental days
+
+The system calculates the total rent and changes the vehicle status to **Rented**.
+
+### 5. Return Vehicle
+
+Allows the user to return a rented vehicle. After returning, the vehicle status is changed back to **Available**.
+
+### 6. Show Rental Records
+
+Displays stored rental information including:
+
+* Customer name
+* Phone number
+* Vehicle
+* Number of rental days
+* Total rent
+
+### 7. Show Total Income
+
+Calculates and displays the total rental income from all recorded rentals.
+
+### 8. Exit
+
+Allows the user to exit the Vehicle Rental Management System.
+
+## Technologies Used
+
+* **Programming Language:** Python
+* **Application Type:** Console-based application
+* **Data Storage:** Python lists
+* **Development Level:** Beginner
+
+## Python Concepts Used
+
+The project demonstrates the following Python concepts:
+
+* Variables
+* Lists
+* Functions
+* `for` loops
+* `while` loops
+* `if-elif-else` statements
+* User input using `input()`
+* Type conversion using `int()`
+* Exception handling using `try-except`
+* String methods such as `lower()`
+* Arithmetic calculations
+* List indexing
+* Function calls
+
+## Expected Outcome
+
+The expected outcome of this project is a simple and easy-to-use vehicle rental system that can manage basic rental operations through a terminal interface.
+
+The system should correctly maintain vehicle availability, calculate rental costs, store rental records, process vehicle returns, and calculate total rental income.
+
+## Scope of the Project
+
+This project focuses on basic vehicle rental management and is intended for learning and educational purposes.
+
+The current version manages data during program execution using Python lists. It does not include a database, graphical user interface, online payment system, user authentication, or permanent file-based storage.
+
+## Conclusion
+
+The Vehicle Rental Management System provides a practical way to understand how Python can be used to create a real-world management application.
+
+By developing this project, basic Python concepts such as functions, lists, loops, conditions, input handling, exception handling, and calculations can be applied together in one complete project.
