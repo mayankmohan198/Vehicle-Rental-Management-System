@@ -11,7 +11,6 @@ vehicles = [
 rentals = []
 
 
-# Function to show available vehicles
 def show_vehicles():
 
     print("\n========== AVAILABLE VEHICLES ==========")
@@ -36,7 +35,6 @@ def show_vehicles():
         print("No vehicles are available.")
 
 
-# Function to show all vehicles
 def show_all_vehicles():
 
     print("\n========== ALL VEHICLES ==========")
@@ -53,7 +51,6 @@ def show_all_vehicles():
         )
 
 
-# Function to search a vehicle
 def search_vehicle():
 
     name = input("\nEnter vehicle name: ")
@@ -76,7 +73,7 @@ def search_vehicle():
         print("Vehicle not found.")
 
 
-# Function to rent a vehicle
+
 def rent_vehicle():
 
     show_vehicles()
@@ -109,10 +106,10 @@ def rent_vehicle():
 
         total = price * days
 
-        # Change vehicle status
+        
         vehicles[number - 1][3] = "Rented"
 
-        # Store rental information
+        
         rental = [
             customer_name,
             phone,
@@ -138,7 +135,7 @@ def rent_vehicle():
         print("Please enter numbers correctly.")
 
 
-# Function to return a vehicle
+
 def return_vehicle():
 
     print("\n========== RETURN VEHICLE ==========")
@@ -189,7 +186,7 @@ def return_vehicle():
         print("Please enter a valid number.")
 
 
-# Function to show rental records
+
 def show_rental_records():
 
     print("\n========== RENTAL RECORDS ==========")
@@ -209,7 +206,6 @@ def show_rental_records():
         print("Total Rent: Rs.", rentals[i][4])
 
 
-# Function to calculate total income
 def total_income():
 
     total = 0
@@ -222,7 +218,7 @@ def total_income():
     print("Total rental income: Rs.", total)
 
 
-# Main program
+
 while True:
 
     print("\n")
