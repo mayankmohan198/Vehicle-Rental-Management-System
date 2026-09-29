@@ -74,7 +74,6 @@ def search_vehicle():
     if found == False:
         print("Vehicle not found.")
 
-
 def rent_vehicle():
 
     show_vehicles()
@@ -134,7 +133,6 @@ def rent_vehicle():
     except ValueError:
 
         print("Please enter numbers correctly.")
-
 
 def return_vehicle():
 
